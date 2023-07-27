@@ -1,6 +1,8 @@
+// we grab wasm by importing bindings
 import { handle } from './build/release.js'
 
 const state = {
+  name: 'U Coin',
   balances: [
     { address: 'tom', amount: 100 },
     { address: 'dmac', amount: 200 },
@@ -15,7 +17,7 @@ const balanceAction = {
     target: 'tom'
   }
 }
-
+// read balance:
 console.log('toms balance:', handle(state, balanceAction).result.amount)
 
 const transferAction = {

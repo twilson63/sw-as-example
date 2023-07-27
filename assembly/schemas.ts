@@ -6,7 +6,8 @@ export class Balance {
 }
 
 export class State {
-  balances!: Array<Balance>
+  balances!: Array<Balance>;
+  name!: string;
 }
 
 export class Input {
