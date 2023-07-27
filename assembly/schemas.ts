@@ -6,17 +6,18 @@ export class Balance {
 }
 
 export class State {
-  //balances!: Array<Array<string>>
   balances!: Array<Balance>
 }
 
 export class Input {
   function!: string;
   target!: string;
+  qty!: Number;
 }
 
 export class Action {
-  input!: Input
+  caller!: string;
+  input!: Input;
 }
 
 export class Result {

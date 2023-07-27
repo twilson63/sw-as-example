@@ -8,13 +8,24 @@ const state = {
   ]
 }
 
-const action = {
+const balanceAction = {
+  caller: 'tom',
   input: {
     function: 'balance',
     target: 'tom'
   }
 }
 
-console.log(JSON.stringify(
-  handle(state, action), null, 2
-))
+console.log('toms balance:', handle(state, balanceAction).result.amount)
+
+const transferAction = {
+  caller: 'tom',
+  input: {
+    function: 'transfer',
+    target: 'dmac',
+    qty: 50
+  }
+}
+console.log('transfer 50 U to dmac')
+console.log('balances: ', handle(state, transferAction).state.balances)
+
