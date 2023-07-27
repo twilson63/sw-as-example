@@ -3,6 +3,7 @@ import { handle } from './build/release.js'
 
 const state = {
   name: 'U Coin',
+  ticker: 'U',
   balances: [
     { address: 'tom', amount: 100 },
     { address: 'dmac', amount: 200 },
